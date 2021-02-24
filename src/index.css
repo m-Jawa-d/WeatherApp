@@ -14,6 +14,7 @@
 .inpo{
   outline: none!important;
   border: none;
+  /* margin-top: 10px; */
   text-align: center;
   border: 2px solid#015871;
 }
@@ -51,7 +52,6 @@ input::placeholder{
   z-index: -1;
   background: #015871;
 }
-
 .wave {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
   position: absolute;
@@ -85,5 +85,35 @@ input::placeholder{
   }
   50% {
     transform: translate3d(0,5px,0);
+  }
+}
+
+@media(max-width:572px){
+  .row{
+    width: 100vw!important;
+    height: 100vh!important;
+    
+  }
+  .card{
+    object-fit: fill;
+    padding: 0!important;
+    margin: 0!important;
+          width: 100vw!important;
+          height: 100vh!important;
+  }
+  .Mobile_Containers{
+    width: 100vw!important;
+    height: 100vh!important;
+}
+  .Mobile_hidden{
+    visibility: hidden!important;
+  }
+  .Mobile_view{
+     position: relative!important;
+     top: 149px!important;
+  }
+  .Mobile_view1{
+    position: relative!important;
+     top: 109px!important;
   }
 }

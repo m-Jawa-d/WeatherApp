@@ -4,7 +4,7 @@ const Year = new Date().getFullYear();
 const Footer = () => {
     return (
         <>
-            <footer className="text-center fixed-bottom bg-white mx-1 margon ">
+            <footer className="text-center Mobile_hidden fixed-bottom bg-white mx-1 margon ">
                 <p><strong> Muhammad Jawad✔</strong>|All Right reserved ©️{Year}.</p>
             </footer>
         </>

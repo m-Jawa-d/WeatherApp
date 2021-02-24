@@ -7,10 +7,11 @@ import Header from './Header';
 function App() {
   return (
     <>
-
-      <Header />
-      <Temp />
-      <Footer />
+      <div className='Mobile_Containers'>
+        <Header />
+        <Temp />
+        <Footer />
+      </div>
     </>
   );
 }
