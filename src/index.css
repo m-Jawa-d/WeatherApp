@@ -14,6 +14,7 @@
 .inpo{
   outline: none!important;
   border: none;
+  /* margin-top: 110px!important; */
   /* margin-top: 10px; */
   text-align: center;
   border: 2px solid#015871;
@@ -91,7 +92,7 @@ input::placeholder{
 @media(max-width:572px){
   .row{
     width: 100vw!important;
-    height: 100vh!important;
+    height: 90vh!important;
     
   }
   .card{
@@ -99,11 +100,11 @@ input::placeholder{
     padding: 0!important;
     margin: 0!important;
           width: 100vw!important;
-          height: 100vh!important;
+          height: 90vh!important;
   }
   .Mobile_Containers{
     width: 100vw!important;
-    height: 100vh!important;
+    height: 90vh!important;
 }
   .Mobile_hidden{
     visibility: hidden!important;

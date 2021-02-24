@@ -31,7 +31,7 @@ function Temp() {
           <div className="col-lg-10 col-12 mx-auto text-center ">
             <div className="d-flex  justify-content-center align-items-center cen">
               <div class="card round" style={{ width: "20rem" }}>
-                <input placeholder="Enter City/Country Name" type="search" onChange={thisVal} className="mx-2 text-capitalize font-weight-bold mt-2 p-2 rounded-pill inpo" />
+                <input placeholder="Enter City/Country Name" type="search" onChange={thisVal} className="mx-4 text-capitalize font-weight-bold mt-4 p-2 rounded-pill inpo" />
                 {/* {!tem ? (<p>error</p>) : */}
                 {!tem ? <div class="card-body">
                   <i class="fas Mobile_view1 fa-3x clr textshadow fa-cloud-sun"></i>
