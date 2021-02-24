@@ -45,7 +45,7 @@ input::placeholder{
 
 
 .ocean { 
-  height: 1%;
+  height: 7%;
   width:100%;
   position:absolute;
   bottom:0;
@@ -89,18 +89,19 @@ input::placeholder{
   }
 }
 
-@media(max-width:572px){
+@media(max-width:672px){
   .row{
     width: 100vw!important;
     height: 90vh!important;
     
   }
   .card{
+    position: fixed!important;
     object-fit: fill;
     padding: 0!important;
     margin: 0!important;
           width: 100vw!important;
-          height: 90vh!important;
+          height: 100vh!important;
   }
   .Mobile_Containers{
     width: 100vw!important;
@@ -111,10 +112,13 @@ input::placeholder{
   }
   .Mobile_view{
      position: relative!important;
-     top: 149px!important;
+     top: 129px!important;
   }
   .Mobile_view1{
     position: relative!important;
-     top: 109px!important;
+     top: 70px!important;
+  }
+  .ocean { 
+    height: 20%!important;
   }
 }
