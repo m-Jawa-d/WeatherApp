@@ -5,6 +5,7 @@ import axios from 'axios';
 function Temp() {
   const [val, Upval] = useState("ChowkAzam");
   const [tem, upTemp] = useState('');
+  const [weather, upWeather] = useState('');
   // useEffect();
   const thisVal = (obj) => {
     Upval(obj.target.value)
@@ -14,7 +15,8 @@ function Temp() {
     const Ftapi = async () => {
       const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${val}&units=metric&appid=3a5aaa16e9eb6e5874e01ea52d0b5e15`)
       // const resjson = await response.json();
-      console.log(response.data.main)
+      console.log(response.data)
+      upWeather(response.data.weather[0].description)
       upTemp(response.data.name)
       upTemp(response.data.main)
     }
@@ -47,7 +49,7 @@ function Temp() {
                 </div> :
                   <div class="card-body">
                     <i class="fas Mobile_view1 fa-3x clr textshadow fa-cloud-sun"></i>
-                    <h1 className="card-title Mobile_view1  text-capitalize textshadow1 text-secondary font-weight-bold pt-2 pb-5"> {val}</h1>
+                    <h1 className="card-title Mobile_view1  text-capitalize textshadow1 text-secondary font-weight-bold pt-2 pb-5"> {val}<h4 style={{color:"grey",fontWeight:''}} className='text-capitalizen text-black'>{`( ${weather} )`}</h4></h1>
                     <div className=" Mobile_view overflow-hidden"><h1 className="mt-5 overflow-hidden  text-white textshadow font-weight-bold">{tem.temp}°C</h1>
                       <h5 >Feels like {tem.feels_like}°C </h5>
                       <p class="card-text mt-4 textshadow text-white">Min {tem.temp_min}°C | Max {tem.temp_max}°C</p>
