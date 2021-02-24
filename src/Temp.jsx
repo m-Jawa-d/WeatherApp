@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import "./index.css";
+import axios from 'axios';
 function Temp() {
   const [val, Upval] = useState("ChowkAzam");
   const [tem, upTemp] = useState('');
@@ -11,11 +12,11 @@ function Temp() {
 
   useEffect(() => {
     const Ftapi = async () => {
-      const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${val}&units=metric&appid=3a5aaa16e9eb6e5874e01ea52d0b5e15`)
-      const resjson = await response.json();
-      console.log(resjson.main)
-      upTemp(resjson.name)
-      upTemp(resjson.main)
+      const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${val}&units=metric&appid=3a5aaa16e9eb6e5874e01ea52d0b5e15`)
+      // const resjson = await response.json();
+      console.log(response.data.main)
+      upTemp(response.data.name)
+      upTemp(response.data.main)
     }
 
     Ftapi();
